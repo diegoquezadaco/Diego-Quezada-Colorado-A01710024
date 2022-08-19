@@ -78,4 +78,5 @@ listcontacts()
 #nota: se que este código esta incompleto, pero como necesitamos el uso de una librería, hay muchas funciones
 de la lista de contactos que no pude definir porque no se como interactuarían con las otras funciones, así que
 trate de describir lo mejor posible mi idea, usando las funciones que conozco.
+Adjunto el archivo en un debugger por cualquier cosa : shorturl.at/ABVW9
 """
