@@ -1,4 +1,4 @@
-# README PCI Python
+# Diego Quezada Colorado A01710024 README PCI Python
 
 """
 Este algoritmo tiene la función de crear una lista de contactos y guardarlos en un archivo .txt , definiendo 
