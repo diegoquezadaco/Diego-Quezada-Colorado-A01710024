@@ -1,6 +1,5 @@
 # README PCI Python
 
-Avance 1:
 """
 Este algoritmo tiene la función de crear una lista de contactos y guardarlos en un archivo .txt , definiendo 
 clases y atributos previamente para esto, previamente tenemos que definir el nombre de nuesta carpeta de 
@@ -17,66 +16,135 @@ por la librería en cuestión.
 
 Por tanto, para realizar dicho programa podríamos hacer lo siguiente:
 
-importar libreria
+#Paso 1 definir algoritmos
+Crear contacto
+Editar contacto
+Buscar contacto
+Eliminar contacto
+Ver contactos
+Salir
+#Definir algoritmo principal
+Menu
+Nombre, numero y edad
+promedio de edad de tus contactos
+la edad que más repita
+la menor y la mayor (el contacto)
+#Definir valores iniciales
+opcion=0
+1. Mostrar el menú
+2. preguntar al usuario la opcion (opcion=entrada)
+3. mientras la opción sea diferente de 6
+    3.1. Si la opcion=1
+        3.1.1. Ejecutar "crear contacto"
+    3.2. Si la opcion=2
+        3.2.1. Ejecutar "editar contacto"
+    3.3. Si la opcion=3
+        3.3.1. Ejecutar "buscar contacto"
+    3.4. Si la opcion=4
+        3.4.1. Ejecutar "eliminar contacto"
+    3.5. Si la opcion=5
+        3.5. Ejecutar "ver contactos"
+    3.6. Si la opcion no es ninguna de las anteriores
+        3.6.1. mandar un mensaje de error
+    3.7. preguntar si quiere seguir utilizando la app
+        3.7.1. si dice que si
+            3.7.1.1. Mostrar el menú y volver a preguntar la opción 
+        3.7.2. si no
+            3.7.2.1. Opcion=6
+4. Mostrar despedida
+diccionarios tiene un indice alfanumérico
+#FIN
 
-CARPETA DE CONTACTOS= 'Contactos.txt'
-#le damos un valor inicial a nuestras variables
-definir (nombre,numero,categoria):
-        nombre=''
-        numero=0
-        residencia=''
-        foto=(archivo .png)
-#funcion principal
-definir listcontacts():
-    pregunta=Verdad
-    opcion=input('Selecciona una de las opciones disponibles')
-    print('1. Agregar contacto
-            2. Editar contacto
-            3. Ver contactos
-            4. Buscar contacto
-            5. Eliminar contacto)
-    definir mostmenu():
-        mientras pregunta=Verdad
-            opcion=input('Seleccione una de las siguientes opciones')
-                if opcion=='1':
-                    agregar_contacto()
-                    preguntar=Falso
-                elif opcion=='2':
-                    editar_contacto()
-                    preguntar=Falso
-                elif opcion=='3':
-                    ver_contacto()
-                    preguntar=Falso
-                elif opcion=='4':
-                    buscar_contacto()
-                    preguntar=Falso
-                elif opcion=='5':
-                    eliminarar_contacto()
-                    preguntar=Falso
-                else: 
-                    print('Opción no válida, intentelo de nuevo')
-    mostmenu():
-    definir agregar_contacto():
-        print('Escribe los datos que tendra tu nuevo contacto')
-        nombre_contacto=input('Nombre:')
-        #Revisar si el archivo ya existe antes de crearlo
-        existe=buscar.libreria(CARPETA +nombre_contacto+ )
-        if not existe:
-            with editar.libreria(CARPETA +nombre_contacto+ ):        
-                #Llenamos el resto de los campos
-                numero_contacto=input('Número telefonico: ')
-                categoria_contacto=input('Categoria del contacto: ')
-
-                enviaratxt.libreria():
-
-                #Decirle al usuario que se guardo correctamente
-                print('Contacto Guardado Correctamente :)')
-        else:
-            print('Este contacto ya existe en tu lista')
-#despues de todo, volvemos a llamar a la función, para que pueda seguir guardando contactos
-listcontacts()
-#nota: se que este código esta incompleto, pero como necesitamos el uso de una librería, hay muchas funciones
-de la lista de contactos que no pude definir porque no se como interactuarían con las otras funciones, así que
-trate de describir lo mejor posible mi idea, usando las funciones que conozco.
-Adjunto el archivo en un debugger por cualquier cosa : shorturl.at/ABVW9
+#Definir las funciones de los algoritmos
+Crear contacto:
+    1. Pedir al usuario el nombre del nuevo contacto
+        1.1. llamar a la función "buscar contacto" y checar que no exista un contacto del mismo nombre
+        1.2 si existe
+            1.2.1. Mostrar un mensaje de error
+        1.3 si no existe
+            1.3.1. Pedir número de telefono
+            1.3.2. Pedir edad del contacto
+            1.3.3. Guardar los datos en el diccionario
+            1.3.4. Mostrar mensaje de éxito
+Editar contacto: 
+    1. Pedir al usuario el nombre
+    2. Llamar a la función "buscar contacto"
+    3. Solicitar la búsqueda de la cadena proporcionada por el usuario
+    4. si existe
+        4.1. llamar la función de "eliminar contacto"
+        4.2 llamar la función de "crear contacto"
+            4.2.1. solicitar al usuario los datos otra vez (nombre, teléfono y edad)
+            4.2.2. guardar el nuevo contacto
+            4.2.3. Mostrar un mensaje de éxito
+    5. si no existe
+        5.1 Mostrar un mensaje de error
+Buscar contactos:
+    1.Pedir al usuario el nombre
+    2. Buscar la cadena proporcionada por el usuario en el diccionario
+    3. Si existe
+        3.1. Mostrar nombre, teléfono y edad del contacto solicitado
+    4. Si no existe
+        4.1 Mostrar un mensaje de error
+Eliminar contacto:
+    1. Pedir al usuario el nombre
+    2. Llamar a la función "buscar contacto"
+    3. Si existe
+        3.2. Borrar elemento del diccionario 
+        3.3. Mostrar mensaje de éxito
+    4. Si no existe
+        4.1 Mostrar un mensaje de error
+Ver contactos:
+    1. Imprimir "Aquí esta su lista de contactos"
+    2. Imprimir todo el diccionario seccionado por nombre, telefono y edad
+    3. Preguntar al usuario si quiere saber datos interesantes acerca de la edad de sus contactos
+    4. Si dice que si
+        4.1 Imprimir "el promedio de edades de sus contactos es {promedio}"
+        4.2 Imprimir "La edad que más se repite en sus contactos es {moda}"
+        4.3 Imprimir "Su contacto más joven es {menorn}"
+        4.4 Imprimir "Su contacto más viejo es {mayorn}"
+        4.5 Mostrar un mensaje de éxito
+    5. Si dice que no
+        5.1 Mostrar un mensaje de éxito.
+    
+promedio de edad de tus contactos
+la edad que más repita
+la menor y la mayor (el contacto)
 """
+from timeit import repeat
+
+
+edades=[]
+Bol=True
+while Bol==True:
+    pregunta=str(input("¿Quiere agregar una edad?: "))
+    if pregunta=="si":
+        Bol=True
+        edad=int(input("Inserte una edad: "))
+        edades.append(edad)
+    else:
+        Bol=False
+        print("Gracias por sus datos :)")
+
+promedio=str(input("Quiere conocer el promedio de edad de sus contactos?: "))
+if promedio=="si":
+    suma_edad=sum(edades)
+    num_edad=len(edades)
+    resprom=suma_edad/num_edad
+    print("El promedio de las edades de sus contactos es de " + str(resprom) +" años.")
+else:
+    print("Esta bien :)")
+
+maximo=str(input("¿Quiere conocer la edad máxima y minima de su lista de contactos? "))
+if maximo=="si":
+    maxim=max(edades)
+    minim=min(edades)
+    print("La mayor edad de su lista es de " +str(maxim)+ "años")
+    print("La menor edad de su lista es de " +str(minim)+ "años")
+else:
+    print("Esta bien :)")
+repetida=str(input("Quiere conocer su edad más repetida en su lista de contactos?: "))
+if repetida=="si":
+    repet=max(set(edades), key=edades.count)
+    print("La edad que más se repite en su lista de contactos es "+str(repet)+ "años")
+Por cualquier cosa, aquí hay un link a un compilador: https://onlinegdb.com/gtiGTgmLJ 
+
