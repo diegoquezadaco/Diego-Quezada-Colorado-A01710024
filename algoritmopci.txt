@@ -1,0 +1,93 @@
+#Paso 1 definir algoritmos
+Crear contacto
+Editar contacto
+Buscar contacto
+Eliminar contacto
+Ver contactos
+Salir
+#Definir algoritmo principal
+Menu
+Nombre, numero y edad
+promedio de edad de tus contactos
+la edad que más repita
+la menor y la mayor (el contacto)
+#Definir valores iniciales
+opcion=0
+1. Mostrar el menú
+2. preguntar al usuario la opcion (opcion=entrada)
+3. mientras la opción sea diferente de 6
+    3.1. Si la opcion=1
+        3.1.1. Ejecutar "crear contacto"
+    3.2. Si la opcion=2
+        3.2.1. Ejecutar "editar contacto"
+    3.3. Si la opcion=3
+        3.3.1. Ejecutar "buscar contacto"
+    3.4. Si la opcion=4
+        3.4.1. Ejecutar "eliminar contacto"
+    3.5. Si la opcion=5
+        3.5. Ejecutar "ver contactos"
+    3.6. Si la opcion no es ninguna de las anteriores
+        3.6.1. mandar un mensaje de error
+    3.7. preguntar si quiere seguir utilizando la app
+        3.7.1. si dice que si
+            3.7.1.1. Mostrar el menú y volver a preguntar la opción 
+        3.7.2. si no
+            3.7.2.1. Opcion=6
+4. Mostrar despedida
+diccionarios tiene un indice alfanumérico
+#FIN
+
+#Definir las funciones de los algoritmos
+Crear contacto:
+    1. Pedir al usuario el nombre del nuevo contacto
+        1.1. llamar a la función "buscar contacto" y checar que no exista un contacto del mismo nombre
+        1.2 si existe
+            1.2.1. Mostrar un mensaje de error
+        1.3 si no existe
+            1.3.1. Pedir número de telefono
+            1.3.2. Pedir edad del contacto
+            1.3.3. Guardar los datos en el diccionario
+            1.3.4. Mostrar mensaje de éxito
+Editar contacto: 
+    1. Pedir al usuario el nombre
+    2. Llamar a la función "buscar contacto"
+    3. Solicitar la búsqueda de la cadena proporcionada por el usuario
+    4. si existe
+        4.1. llamar la función de "eliminar contacto"
+        4.2 llamar la función de "crear contacto"
+            4.2.1. solicitar al usuario los datos otra vez (nombre, teléfono y edad)
+            4.2.2. guardar el nuevo contacto
+            4.2.3. Mostrar un mensaje de éxito
+    5. si no existe
+        5.1 Mostrar un mensaje de error
+Buscar contactos:
+    1.Pedir al usuario el nombre
+    2. Buscar la cadena proporcionada por el usuario en el diccionario
+    3. Si existe
+        3.1. Mostrar nombre, teléfono y edad del contacto solicitado
+    4. Si no existe
+        4.1 Mostrar un mensaje de error
+Eliminar contacto:
+    1. Pedir al usuario el nombre
+    2. Llamar a la función "buscar contacto"
+    3. Si existe
+        3.2. Borrar elemento del diccionario 
+        3.3. Mostrar mensaje de éxito
+    4. Si no existe
+        4.1 Mostrar un mensaje de error
+Ver contactos:
+    1. Imprimir "Aquí esta su lista de contactos"
+    2. Imprimir todo el diccionario seccionado por nombre, telefono y edad
+    3. Preguntar al usuario si quiere saber datos interesantes acerca de la edad de sus contactos
+    4. Si dice que si
+        4.1 Imprimir "el promedio de edades de sus contactos es {promedio}"
+        4.2 Imprimir "La edad que más se repite en sus contactos es {moda}"
+        4.3 Imprimir "Su contacto más joven es {menorn}"
+        4.4 Imprimir "Su contacto más viejo es {mayorn}"
+        4.5 Mostrar un mensaje de éxito
+    5. Si dice que no
+        5.1 Mostrar un mensaje de éxito.
+    
+promedio de edad de tus contactos
+la edad que más repita
+la menor y la mayor (el contacto)
