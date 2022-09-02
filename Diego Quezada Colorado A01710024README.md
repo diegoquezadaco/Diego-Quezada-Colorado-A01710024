@@ -110,41 +110,69 @@ promedio de edad de tus contactos
 la edad que más repita
 la menor y la mayor (el contacto)
 """
-from timeit import repeat
+
+
+from ast import Global
 
 
 edades=[]
-Bol=True
-while Bol==True:
-    pregunta=str(input("¿Quiere agregar una edad?: "))
-    if pregunta=="si":
-        Bol=True
-        edad=int(input("Inserte una edad: "))
-        edades.append(edad)
+nombres=[]
+telefonos=[]
+def operaciones_edades():
+    promedio=str(input("Quiere conocer el promedio de edad de sus contactos?: "))
+    if promedio=="si":
+        suma_edad=sum(edades)
+        num_edad=len(edades)
+        resprom=suma_edad/num_edad
+        print("El promedio de las edades de sus contactos es de " + str(resprom) +" años.")
     else:
-        Bol=False
-        print("Gracias por sus datos :)")
-
-promedio=str(input("Quiere conocer el promedio de edad de sus contactos?: "))
-if promedio=="si":
-    suma_edad=sum(edades)
-    num_edad=len(edades)
-    resprom=suma_edad/num_edad
-    print("El promedio de las edades de sus contactos es de " + str(resprom) +" años.")
-else:
-    print("Esta bien :)")
-
-maximo=str(input("¿Quiere conocer la edad máxima y minima de su lista de contactos? "))
-if maximo=="si":
-    maxim=max(edades)
-    minim=min(edades)
-    print("La mayor edad de su lista es de " +str(maxim)+ "años")
-    print("La menor edad de su lista es de " +str(minim)+ "años")
-else:
-    print("Esta bien :)")
-repetida=str(input("Quiere conocer su edad más repetida en su lista de contactos?: "))
-if repetida=="si":
-    repet=max(set(edades), key=edades.count)
-    print("La edad que más se repite en su lista de contactos es "+str(repet)+ "años")
-Por cualquier cosa, aquí hay un link a un compilador: https://onlinegdb.com/gtiGTgmLJ 
+        print("Esta bien :)")
+    maximo=str(input("¿Quiere conocer la edad máxima y minima de su lista de contactos? "))
+    if maximo=="si":
+        maxim=max(edades)
+        minim=min(edades)
+        print("La mayor edad de su lista es de " +str(maxim)+ " años")
+        print("La menor edad de su lista es de " +str(minim)+ " años")
+    else:
+        print("Esta bien :)")
+    repetida=str(input("Quiere conocer su edad más repetida en su lista de contactos?: "))
+    if repetida=="si":
+        repet=max(set(edades), key=edades.count)
+        print("La edad que más se repite en su lista de contactos es "+str(repet)+ " años")
+def crear_contacto():
+    buscar_contacto()
+    print("Puede agregar el contacto")
+    nombres.append(nom_conuser)
+    telefono=input("Inserte el número telefónico de su contacto, recuerde que debe ser de 10 digitos: ")
+    numnum= telefono.count('')
+    numnum=numnum-1
+    if numnum!=10 :
+        print("Este número de telefono no es válido, por favor intentalo denuevo y digita y número correcto")
+    else:
+        telefonos.append(telefono)
+        pass
+    edad=int(input("Inserte la edad de su contacto: "))
+    edades.append(edad)
+    print("el contacto fue guardado exitosamente")    
+def buscar_contacto():
+    global nom_conuser
+    nom_conuser=input("Inserte el nombre de su nuevo contacto: ")
+    if nom_conuser in nombres:
+        print("El nombre ya existe en la lista, por favor intentelo de nuevo")
+    else:
+        pass
+def eliminar_contacto():
+    buscar_contacto()
+    pregunta=input("¿Esta seguro que desea eliminar este contacto? ")
+    if pregunta=="si":
+        nombres.pop(nom_conuser)
+    else:
+        pass
+def editar_contacto():
+    buscar_contacto()
+    print("Puede editar el contacto")
+    eliminar_contacto()
+    crear_contacto()
+    print("El contacto fue guardado exitosamente")
+https://onlinegdb.com/6ERrgS7l0
 
