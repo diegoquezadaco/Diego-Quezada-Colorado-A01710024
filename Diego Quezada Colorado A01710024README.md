@@ -1,5 +1,3 @@
-# Diego Quezada Colorado A01710024 README PCI Python
-
 """
 Este algoritmo tiene la función de crear una lista de contactos y guardarlos en un archivo .txt , definiendo 
 clases y atributos previamente para esto, previamente tenemos que definir el nombre de nuesta carpeta de 
@@ -111,10 +109,7 @@ la edad que más repita
 la menor y la mayor (el contacto)
 """
 
-
-from ast import Global
-
-
+from art import tprint
 edades=[]
 nombres=[]
 telefonos=[]
@@ -156,9 +151,9 @@ def crear_contacto():
     print("el contacto fue guardado exitosamente")    
 def buscar_contacto():
     global nom_conuser
-    nom_conuser=input("Inserte el nombre de su nuevo contacto: ")
+    nom_conuser=input("Inserte el nombre de su contacto: ")
     if nom_conuser in nombres:
-        print("El nombre ya existe en la lista, por favor intentelo de nuevo")
+        print("El nombre ya existe en la lista")
     else:
         pass
 def eliminar_contacto():
@@ -174,5 +169,25 @@ def editar_contacto():
     eliminar_contacto()
     crear_contacto()
     print("El contacto fue guardado exitosamente")
-https://onlinegdb.com/6ERrgS7l0
+def mostrar_contactos():
+    tprint("Contactos: ")
+    x=len(nombres)
+    for i in range(x):
+        print("Nombre: "+(nombres[i])+ "")
+        print("Número de teléfono: "+str(telefonos[i])+ "")
+        print("Edad: "+str(edades[i])+ " años")
+#PROBAR FUNCIONAMIENTO DE LAS FUNCIONES Y DEL WHILE PRINCIPAL
+bol=bool
+agregar=input("Desea agregar contactos? ")
+if agregar=="si":
+    bol=True
+else:
+    bol=False
+while bol==True:
+    crear_contacto()
+    agregar=input("Desea agregar otro contacto? ")
+    if agregar=="no":
+        bol=False
+mostrar_contactos()
+https://onlinegdb.com/oeQacokiW
 
