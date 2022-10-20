@@ -1,0 +1,23 @@
+Sub-Competencia: 
+    Usa la forma más a apropiada al problema para guardar los datos (listas, variable, tipo de dato, etc...) (avance 7) (listas anidadas)
+
+Error original: Básicamente todo mi código se basa en listas, pero no estaba haciendo uso de las listas anidadas 
+
+
+Cambio realizado: Cree la lista anidada que anida las listas que ya tenía y ocupe la sintaxis para consultar y modificar los elementos de mis listas
+Además, asigné variables constantes para la posición de cada lista para facilitar la ejecución de la consulta de las listas anidadas
+	 
+    edades = []
+    nombres = []
+    telefonos = []
+    contactos = [edades, nombres, telefonos]
+
+    Ejemplo:
+    antes -> suma_edad=sum(edades)
+
+    ahora -> suma_edad = sum(contactos[EDADES])
+
+Lí­neas de código donde se ve la corrección: 
+
+	1 a 140 declaración de las funciones que modifican los valores de las listas
+
