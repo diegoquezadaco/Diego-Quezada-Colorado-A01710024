@@ -52,13 +52,13 @@ def crear_contacto():
             contactos[NOMBRES].append(nom_conuser)
             tel = False
             while tel == False:
-                telefono = input("""Inserte el número telefónico de su contacto
-                , recuerde que debe ser de 10 digitos: """)
+                telefono = input("""Inserte el número telefónico de su contacto,
+recuerde que debe ser de 10 digitos: """)
                 numnum = telefono.count('')
                 numnum = numnum-1
                 if numnum != 10:
                     print("""Este número de telefono no es válido, por favor 
-                    intentalo denuevo y digita un número correcto""")
+intentalo de nuevo y digita un número correcto""")
                 else:
                     (contactos[TELEFONOS]).append(telefono)
                     tel = True
@@ -81,7 +81,7 @@ def buscar_contacto():
         input()
     else:
         preg = input("""El contacto no existe. ¿Desea agregar uno nuevo? 
-        (si/no) """) == "si"
+(si/no) """) == "si"
         if preg:
             crear_contacto()
         else: 
@@ -91,7 +91,7 @@ def eliminar_contacto():
     nom_conuser = input("Inserte el nombre del contacto: ")
     if nom_conuser in (contactos[NOMBRES]):
         pregunta = input("""¿Esta seguro que desea eliminar este contacto? 
-        (si/no) """) == "si"
+(si/no) """) == "si"
         if pregunta:
             ind = (contactos[NOMBRES]).index(nom_conuser)
             contactos[NOMBRES].pop(ind)
@@ -109,13 +109,13 @@ def editar_contacto():
     ind = encontrar_ind(nom_conuser)
     if ind != -1:
         contactos[NOMBRES][ind] = input("""Inserte el nuevo nombre con que desea 
-        guardar a su contacto: """)
+guardar a su contacto: """)
         contactos[TELEFONOS][ind] = input("""Inserte el nuevo número de teléfono:
-         """)
+""")
         contactos[EDADES][ind] = input("Inserte la nueva edad: ")
     else:
-        preg = input("""El contacto no existe. ¿Desea agregar uno nuevo? (si/no)
-         """) == "si"
+        preg = input("""El contacto no existe. ¿Desea agregar uno nuevo? 
+(si/no): """) == "si"
         if preg:
             crear_contacto()
         else: 
@@ -155,7 +155,8 @@ def menu_app():
             bol = True
             while bol == True:
                 crear_contacto()
-                agregar = input("Desea agregar otro contacto? (si/no) ") == "no"
+                agregar = input("""Desea agregar otro contacto? 
+(si/no): """) == "no"
                 if agregar:
                     bol = False
         elif opcion == 2:
