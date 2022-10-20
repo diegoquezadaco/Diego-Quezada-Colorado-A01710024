@@ -1,17 +1,7 @@
-Este algoritmo tiene la función de crear una lista de contactos y guardarlos en un archivo .txt , definiendo 
-clases y atributos previamente para esto, previamente tenemos que definir el nombre de nuesta carpeta de 
-contactos. Pero antes de todo, debemos hacer uso de una librería de python que nos permita administrar 
-archivos y nos de funciones extra que nos ayuden a crear y eliminar dichos contactos. Posteriormente,
-podemos definir dichas variables y y también el menú que nos permita desplazarnos a lo largo de la libreta
-de contactos sin necesidad de abrir nuestra pequeña "base de datos" y que todo sea una experiencia más cómoda
-para el usuario en cuestión, dicha función se realizaría a ravés de opciones, que fácilmente podríamos definir
-con valores numéricos, en un menú que se le presente al usuario previamente.
+Este algoritmo tiene la función de optimizar un proceso que puede llegar a ser vital en nuestro mundo actual, este proceso es el manejo de los contactos, algo que ha tomado importancia en un mundo laboral donde los contactos y el networking puede ser un gran impulso para cualquier proyecto o negocio.
+Este algoritmo fungirá la función de una app de libreta de contactos, es una herramienta que facilita mucho el proceso de guardar contactos que podemos utilizar en un futuro, para esto debemos añadir funciones que hagan un poco más realista esta libreta de contactos, que nos permitan hacer acciones como editar, guardar, borrar, buscar y añadir nuevos contactos. Todo esto sería a través de funciones definidas con ayuda de condicionales, ciclos, operadores y variables. Y agregando algunas funciones adicionales que pueden también ser de ayuda, respecto al manejo y organización de tus contactos, como la visualización de toda tu libreta de contactos y algunos datos interesantes que puedes conocer con la información guardada de tus contactos.
 
-Asimismo, debemos añadir funciones que hagan un poco más realista esta libreta de contactos, que nos permitan
-editar, guardar, borrar, buscar y añadir nuevos contactos. Todo esto sería a través de funciones proporcionadas
-por la librería en cuestión.
 
-Por tanto, para realizar dicho programa podríamos hacer lo siguiente:
 
 INSTRUCCIONES:
 1- Para hacer un uso correcto del algoritmo, es necesario que se tenga descargado tambien los archivos "titulomenu.txt" y "titulocontactos.txt" y que esten ubicados en la misma carpeta en donde esta el archivo de este algoritmo.
